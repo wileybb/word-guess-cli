@@ -5,40 +5,35 @@ var Word = function(string){
 
     this.array = string.split("");
 
-    // this.trueArray = [];
+    this.trueArray = [];
 
-    // this.letterArrayMaker = function(){
-    //     for(i=0; i<this.array.length; i++){
-    //         var newLetter = new Letter(this.array[i]);
+    this.letterArrayMaker = function(){
+      var array = this.array;
+        for(i=0; i<array.length; i++){
+            var newLetter = new Letter(array[i]);
+            // console.log("hi");
+            this.trueArray.push(newLetter);
             
-    //         this.trueArray.push(newLetter);
-    //     };
-    // };
+        };
+    };
 
     this.word = function(){
         return this.array.join("");
     };
 
     this.check = function(x){
-        if((word.array.indexOf(x)) > -1){
+        if((this.array.indexOf(x)) > -1){
             console.log("correct");
+            return true;
         }else{
             console.log("incorrect");
+            return false;
         };
         
     };
     
 };
 
-var word = new Word("peace");
 
-console.log(word.trueArray);
-
-// console.log(word.word());  
-
-
-// var letter = new Letter("r");
-// letter.checkLetter("r");
-// console.log(letter+"this is this");
 
 module.exports = Word;

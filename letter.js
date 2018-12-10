@@ -22,11 +22,6 @@ var Letter = function(x){
     }
 }
 
-// var a = new Letter ("a");
-
-// console.log(a);
-// a.checkLetter("a");
-// console.log(a.toString());
 
 
 module.exports = Letter;
